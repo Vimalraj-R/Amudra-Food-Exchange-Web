@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions | Amudra</title>
+
+    <style>
+        /* ========== General Styles ========== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        /* ========== Navbar ========== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #004d40, #000000);
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-links li a:hover {
+            color: #f1f1f1;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        /* ========== Terms and Conditions Section ========== */
+        .terms-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #2E7D32, #37474F);
+            padding: 50px;
+        }
+
+        .terms-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .terms-box h2 {
+            color: green;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .terms-box h3 {
+            color: green;
+            margin-top: 15px;
+        }
+
+        .terms-box p, ul {
+            font-size: 14px;
+            color:(134, 219, 7);
+            margin-bottom: 15px;
+        }
+
+        .terms-box ul {
+            padding-left: 20px;
+        }
+
+        .terms-box ul li {
+            margin-bottom: 5px;
+        }
+
+        .terms-box a {
+            color: green;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .terms-box a:hover {
+            text-decoration: underline;
+        }
+
+        .agree-btn {
+            background: green;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+
+        .agree-btn:hover {
+            background: green;
+            transform: scale(1.05);
+        }
+
+        /* ========== Footer ========== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #004d40, #000000);
+            color: white;
+        }
+
+        /* ========== Responsive Design ========== */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .menu-toggle {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .terms-container {
+                height: auto;
+                padding: 30px;
+            }
+
+            .terms-box {
+                width: 90%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- ========== NAVIGATION BAR ========== -->
+    <header class="navbar">
+        <div class="logo">
+            <h2>Amudra</h2>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate-food.html">Donate</a></li>
+                <li><a href="request-food.html">Request Food</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- ========== TERMS AND CONDITIONS SECTION ========== -->
+    <section class="terms-container">
+        <div class="terms-box">
+            <h2>Terms and Conditions</h2>
+            <p>Welcome to Amudra! Please read these terms carefully before using our services.</p>
+
+            <h3>1. General Terms</h3>
+            <p>By accessing our platform, you agree to comply with our terms and policies. You must not misuse the platform for any fraudulent activities.</p>
+
+            <h3>2. User Responsibilities</h3>
+            <ul>
+                <li>Users must provide accurate information when donating or requesting food.</li>
+                <li>Only registered NGOs and verified organizations can request food donations.</li>
+                <li>Food donations must be fresh, safe for consumption, and meet hygiene standards.</li>
+            </ul>
+
+            <h3>3. Food Safety and Liability</h3>
+            <p>Amudra is a non-profit mediator between donors and NGOs. We do not take responsibility for the quality or condition of donated food. Donors are encouraged to ensure food safety.</p>
+
+            <h3>4. Privacy Policy</h3>
+            <p>All user data is securely stored and will not be shared without consent. For more details, refer to our <a href="privacy.html">Privacy Policy</a>.</p>
+
+            <h3>5. Modifications to Terms</h3>
+            <p>We reserve the right to update our terms at any time. Continued use of our platform after changes implies agreement to the new terms.</p>
+
+            <h3>6. Contact Information</h3>
+            <p>If you have any questions about these terms, please contact us at <a href="contact.html">our support page</a>.</p>
+
+            <button class="agree-btn">I Agree</button>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <p>&copy; 2025 Amudra. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

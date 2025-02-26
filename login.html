@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Amudra</title>
+
+    <style>
+        /* ========== General Styles ========== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        /* ========== Navbar ========== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #004d40, #000000);
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-links li a:hover {
+            color: #f1f1f1;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        /* ========== Login Form ========== */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #2E7D32, #37474F);
+
+        }
+        .login-box {
+            background: white;
+            padding: 150px;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 1000px;
+        }
+
+        .login-box h2 {
+            color:black;
+            margin-bottom: 70px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            background: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .input-group i {
+            color: green;
+            margin-right: 30px;
+        }
+
+        .input-group input {
+            border: none;
+            background: none;
+            outline: none;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .input-group:hover {
+            background: #eaeaea;
+        }
+
+        .login-btn {
+            background: green;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+
+        .login-btn:hover {
+            background: green;
+            transform: scale(1.05);
+        }
+
+        .register-link {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .register-link a {
+            color:green;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========== Footer ========== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #004d40, #000000);
+            color: white;
+        }
+
+        /* ========== Responsive Design ========== */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .menu-toggle {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .login-box {
+                width: 90%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- ========== NAVIGATION BAR ========== -->
+    <header class="navbar">
+        <div class="logo">
+            <h2>Amudra</h2>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate-food.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- ========== LOGIN FORM ========== -->
+    <section class="login-container">
+        <div class="login-box">
+            <h2>Login to Amudra</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <p class="register-link">New here? <a href="register.html">Create an account</a></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <p>&copy; 2025 Amudra. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

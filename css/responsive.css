@@ -1,0 +1,156 @@
+/* ========== GENERAL RESPONSIVENESS ========== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+}
+
+/* ========== SMALL SCREENS (MOBILE) ========== */
+@media only screen and (max-width: 600px) {
+
+    /* Header */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .cta-btn {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    /* Dashboard */
+    .dashboard {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Login Form */
+    .login-container {
+        width: 90%;
+    }
+
+    /* Food Detection */
+    .food-detection {
+        padding: 20px;
+    }
+
+    .upload-box {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ========== MEDIUM SCREENS (TABLETS) ========== */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+    /* Adjust Header */
+    header {
+        padding: 15px;
+    }
+
+    nav ul li {
+        font-size: 18px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 80px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-btn {
+        font-size: 18px;
+    }
+
+    /* Dashboard */
+    .dashboard {
+        padding: 30px;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    /* Login Form */
+    .login-container {
+        width: 70%;
+    }
+
+    /* Food Detection */
+    .food-detection {
+        padding: 30px;
+    }
+}
+
+/* ========== LARGE SCREENS (DESKTOPS) ========== */
+@media only screen and (min-width: 1025px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .dashboard {
+        padding: 50px;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 30%;
+    }
+}
