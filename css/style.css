@@ -9,8 +9,6 @@ body {
 /* ========== Navbar ========== */
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 20px;
     background: #ff6b6b;
     color: white;
@@ -24,6 +22,7 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
+    text-align: center;
 }
 
 .nav-links li a {
