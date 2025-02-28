@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amudra | Ending Food Waste</title>
+
+    <style>
+        /* ========== General Styles ========== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        /* ========== Navbar ========== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #004d40, #000000);
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-links li a:hover {
+            color: #f1f1f1;
+        }
+
+        /* ========== Hero Section ========== */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 100px 10%;
+            background: linear-gradient(to right, #2E7D32, #37474F);
+            color: white;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: yellow;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background: white;
+            color:green;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* ========== Features Section ========== */
+        .features {
+            text-align: center;
+            padding: 50px 10%;
+            background: linear-gradient(to right, #2E7D32, #37474F);
+            padding-bottom: 100px;
+            color: white;
+        }
+
+        .feature-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .feature {
+            flex: 1;
+            padding: 20px;
+            background: green;
+            color:#f1f1f1;
+            border-radius: 50px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature1{
+            flex: 1;
+            padding: 20px;
+            color: #f1f1f1;
+            background: green;
+            border-radius: 50px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature2{
+            flex: 1;
+            padding: 20px;
+            color:white;
+            background: green;
+            border-radius: 50px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature i {
+            font-size: 40px;
+            color: green;
+            margin-bottom: 10px;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ========== Footer ========== */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(to right, #004d40, #000000);
+            color: white;
+        }
+
+        /* ========== Responsive Design ========== */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .hero {
+                padding: 50px 5%;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .feature-container {
+                flex-direction: column;
+            }
+
+            .feature {
+                margin-bottom: 20px;
+            }
+            .img{
+                background: white;
+                padding: 15px;
+                border-radius: px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+        }
+        .falling {
+            position: absolute;
+            top: -10%;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Prevent interactions with falling objects */
+        }
+        .falling div {
+            position: absolute;
+            animation: fall 5s linear infinite; /* Faster falling speed */
+        }
+        @keyframes fall {
+            0% {
+                top: -10%;
+                transform: rotate(0deg);
+            }
+            100% {
+                top: 100%;
+                transform: rotate(360deg);
+            }
+        }
+        /* Add different falling elements with varied speeds and positions */
+        .falling div:nth-child(1) {
+      left: 10%;
+      animation-duration: 4s; /* Shorter duration for faster fall */
+      animation-delay: 0s;
+      font-size: 50px;
+      color: #FF6347; /* Tomato */
+    }
+
+    .falling div:nth-child(2) {
+      left: 30%;
+      animation-duration: 3s; /* Even faster fall */
+      animation-delay: 1s;
+      font-size: 60px;
+      color: #FFD700; /* Gold */
+    }
+
+    .falling div:nth-child(3) {
+      left: 50%;
+      animation-duration: 4.5s; /* Slightly slower fall */
+      animation-delay: 2s;
+      font-size: 55px;
+      color: #32CD32; /* Lime Green */
+    }
+
+    .falling div:nth-child(4) {
+      left: 70%;
+      animation-duration: 3.5s; /* Fast fall */
+      animation-delay: 3s;
+      font-size: 65px;
+      color: #FF4500; /* Orange Red */
+    }
+
+    .falling div:nth-child(5) {
+      left: 90%;
+      animation-duration: 4s; /* Medium-speed fall */
+      animation-delay: 4s;
+      font-size: 45px;
+      color: #8A2BE2; /* Blue Violet */
+    }
+
+    </style>
+
+</head>
+<body>
+    <div class="falling">
+    <div>🍞</div> <!-- Falling bread -->
+    <div>🍎</div> <!-- Falling apple -->
+    <div>🍗</div> <!-- Falling chicken -->
+    <div>🍊</div> <!-- Falling orange -->
+    <div>🥖</div> <!-- Falling baguette -->
+  </div>
+    <!-- ========== Navbar ========== -->
+     
+    <header class="navbar">
+        <div class="logo">
+            <h2>Amudra</h2>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://landbot.online/v3/H-2807846-2JWQV5J3TCR0XQFF/index.html">Chatbot</a></li>
+                <li><a href="login.html" class="btn">Login</a></li>
+                <li><a href="https://foodspoil-2tvknx9cycweztxerjrupb.streamlit.app/">Food Detection</a></li>
+                <li><a href="https://cvmodel-6quhshnfymarfwfpsactuh.streamlit.app/">Amudra's CV</a></li>
+                <li><a href="donate-food.html">Donate</a></li>
+                <li><a href="request-food.html">Request Food</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- ========== Hero Section ========== -->
+    <section class="hero">
+        <div class="img">
+            <img src="images/logo.png" alt="Co-founder">
+        </div>
+        <div class="hero-content">
+            <h1>Ending Food Waste, Feeding Those in Need</h1>
+            <p>Join Amudra in redistributing surplus food to those who need it most.</p>
+            <a href="donate-food.html" class="cta-btn">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- ========== Features Section ========== -->
+    <section class="features">
+        <h2>How Amudra Works</h2>
+            <div class="feature">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Donate Surplus Food</h3>
+                <p>Restaurants and individuals can donate surplus food to help those in need.</p>
+            </div>
+            <div class="feature1">
+                <i class="fas fa-truck"></i>
+                <h3>Efficient Redistribution</h3>
+                <p>Our AI system ensures food is distributed efficiently to NGOs.</p>
+            </div>
+
+            <div class="feature2">
+                <i class="fas fa-seedling"></i>
+                <h3>Food Freshness Detection</h3>
+                <p>AI-based analysis checks food quality to ensure only safe food is donated.</p>
+            </div>
+    </section>
+
+    <!-- ========== Footer ========== -->
+    <section><footer>
+        <p>&copy; 2025 Amudra. All rights reserved.</p>
+    </footer>
+</section>
+
+</body>
+</html>

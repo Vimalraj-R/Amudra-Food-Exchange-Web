@@ -1,0 +1,242 @@
+/* ========== General Styles ========== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+    display: flex;
+    padding: 20px;
+    background: #ff6b6b;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #f1f1f1;
+}
+
+/* ========== Hero Section (Index Page) ========== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    background: linear-gradient(135deg, #ff6b6b, #ff4d4d);
+    color: white;
+    margin-top: 70px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.cta-btn {
+    background: white;
+    color: #ff6b6b;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ========== Features Section ========== */
+.features {
+    text-align: center;
+    padding: 50px 10%;
+    background: #f8f9fa;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.feature {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+/* ========== Footer ========== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+/* ========== Login Page ========== */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff6b6b, #ff4d4d);
+}
+
+.login-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+.login-btn {
+    background: #ff6b6b;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+}
+
+.login-btn:hover {
+    background: #ff4d4d;
+}
+
+/* ========== Food Detection Page ========== */
+.food-detection {
+    padding: 40px;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.detection-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Donation Page ========== */
+.donation-form {
+    padding: 40px;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.donation-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.donate-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #ff6b6b;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.donate-btn:hover {
+    transform: scale(1.05);
+    background: #ff4d4d;
+}
+
+/* ========== Request Food Page ========== */
+.request-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #FF9800, #F57C00);
+}
+
+.request-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+.request-btn {
+    background: #FF9800;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.request-btn:hover {
+    background: #F57C00;
+}
+
+/* ========== Terms Page ========== */
+.terms-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #FF9800, #F57C00);
+}
+
+.terms-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 500px;
+}
+
+/* ========== Animations ========== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}

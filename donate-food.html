@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Food | Amudra</title>
+
+    <style>
+        /* ========== General Styles ========== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        /* ========== Sidebar ========== */
+        .sidebar {
+            position: fixed;
+            width: 250px;
+            height: 100%;
+            background: linear-gradient(to right, #004d40, #000000);
+            padding: 20px;
+            color: white;
+        }
+
+        .sidebar .logo {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .sidebar .menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar .menu li {
+            margin: 20px 0;
+        }
+
+        .sidebar .menu li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar .menu li a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========== Donation Form ========== */
+        .donation-form {
+            margin-left: 270px;
+            padding: 40px;
+            background: linear-gradient(to right, #2E7D32, #37474F);
+            color: white;
+            min-height: 100vh;
+        }
+
+        .donation-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .donate-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: white;
+            
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .donate-btn:hover {
+            transform: scale(1.05);
+            background: #aff1c9;
+        }
+
+        #successMessage {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #14bb3b;
+            font-weight: bold;
+            display: Success;
+        }
+
+        /* ========== Loader Animation ========== */
+        #loader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #28a745;
+            border-top: 5px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* ========== Responsive Design ========== */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                text-align: center;
+            }
+
+            .donation-form {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(() => document.getElementById("loader").style.display = "none", 1000);
+        });
+    </script>
+
+</head>
+<body>
+
+    <!-- ========== LOADER ========== -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>Amudra</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="active"><a href="donate-food.html"><i class="fas fa-hand-holding-heart"></i> Donate Food</a></li>
+            <li><a href="https://foodspoil-2tvknx9cycweztxerjrupb.streamlit.app/"><i class="fas fa-seedling"></i> Food Detection</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="donation-form">
+        <header class="donation-header">
+            <h1>Donate Food</h1>
+            <p>Help feed those in need by donating surplus food.</p>
+        </header>
+
+        <form id="donationForm">
+            <div class="form-group">
+                <label for="donorName" color="white">Your Name</label>
+                <input type="text" id="donorName" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="foodType">Food Type</label>
+                <select id="foodType" required>
+                    <option value="" disabled selected>Select food type</option>
+                    <option value="Cooked Meals">Cooked Meals</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Dairy Products">Dairy Products</option>
+                    <option value="Bakery Items">Bakery Items</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Quantity (in kg)</label>
+                <input type="number" id="quantity" placeholder="Enter quantity" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pickupLocation">Pickup Location</label>
+                <input type="text" id="pickupLocation" placeholder="Enter location" required>
+            </div>
+
+            <div class="form-group">
+                <label for="expiryDate">Food Expiry Date</label>
+                <input type="date" id="expiryDate" required>
+            </div>
+
+            <button type="submit" class="donate-btn">Submit Donation</button>
+        </form>
+
+        <div id="successMessage">
+            <p>🎉 Thank you! Your donation has been submitted successfully.</p>
+        </div>
+    </main>
+
+</body>
+</html>

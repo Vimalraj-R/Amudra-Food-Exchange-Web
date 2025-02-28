@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Amudra</title>
+
+    <style>
+        /* ========== General Styles ========== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        /* ========== Sidebar ========== */
+        .sidebar {
+            position: fixed;
+            width: 220px;
+            height: 100%;
+            background: linear-gradient(to right, #004d40, #000000);
+            padding: 20px;
+            color: white;
+        }
+
+        .sidebar .logo {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .sidebar .menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar .menu li {
+            margin: 20px 0;
+        }
+
+        .sidebar .menu li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar .menu li a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========== Dashboard Content ========== */
+        .dashboard {
+            margin-left: 250px;
+            padding: 20px;
+            background: linear-gradient(to right, #2E7D32, #37474F);
+
+            min-height: 100vh;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #dark-mode-toggle {
+            padding: 5px 10px;
+            border: none;
+            background: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* ========== Statistics Section ========== */
+        .dashboard-stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-box {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-box i {
+            font-size: 30px;
+            color: green;
+        }
+
+        /* ========== Recent Donations Table ========== */
+        .recent-donations {
+            margin-top: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .recent-donations table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .recent-donations th, .recent-donations td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .recent-donations .status {
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .recent-donations .status.completed {
+            background: #28a745;
+            color: white;
+        }
+
+        .recent-donations .status.pending {
+            background: #ffc107;
+            color: black;
+        }
+
+        /* ========== Responsive Design ========== */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                text-align: center;
+            }
+
+            .dashboard {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            .dashboard-stats {
+                flex-direction: column;
+            }
+
+            .recent-donations table {
+                font-size: 14px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>Amudra</h2>
+        </div>
+        <ul class="menu">
+            <li class="active"><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="donate-food.html"><i class="fas fa-hand-holding-heart"></i> Donate Food</a></li>
+            <li><a href="food-detection.html"><i class="fas fa-seedling"></i> Food Detection</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="dashboard">
+        <header class="dashboard-header">
+            <h1>Welcome, User!</h1>
+            <button id="dark-mode-toggle">🌙</button>
+        </header>
+
+        <!-- ========== Statistics Section ========== -->
+        <section class="dashboard-stats">
+            <div class="stat-box">
+                <i class="fas fa-utensils"></i>
+                <h3>120+</h3>
+                <p>Meals Donated</p>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-users"></i>
+                <h3>50+</h3>
+                <p>NGOs Connected</p>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-check-circle"></i>
+                <h3>98%</h3>
+                <p>Food Utilization Rate</p>
+            </div>
+        </section>
+
+        <!-- ========== Recent Donations Table ========== -->
+        <section class="recent-donations">
+            <h2>Recent Donations</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Donor</th>
+                        <th>Food Type</th>
+                        <th>Quantity</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>Vegetables</td>
+                        <td>20 kg</td>
+                        <td class="status completed">Completed</td>
+                    </tr>
+                    <tr>
+                        <td>ABC Restaurant</td>
+                        <td>Cooked Meals</td>
+                        <td>50 Plates</td>
+                        <td class="status pending">Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>

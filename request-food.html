@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Food | Amudra</title>
+
+    <style>
+        /* ========== General Styles ========== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        /* ========== Navbar ========== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #004d40, #000000);
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-links li a:hover {
+            color: #f1f1f1;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        /* ========== Request Form ========== */
+        .request-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #2E7D32, #37474F);
+        }
+
+        .request-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px green(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+        }
+
+        .request-box h2 {
+            color: green;
+            margin-bottom: 10px;
+        }
+
+        .request-box p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            background: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+
+        .input-group i {
+            color: green;
+            margin-right: 10px;
+        }
+
+        .input-group input, textarea {
+            border: none;
+            background: none;
+            outline: none;
+            width: 100%;
+            font-size: 16px;
+            resize: none;
+        }
+
+        .input-group:hover {
+            background: #eaeaea;
+        }
+
+        textarea {
+            height: 80px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            background: #f1f1f1;
+            border: none;
+        }
+
+        .request-btn {
+            background: green;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+
+        .request-btn:hover {
+            background: grey;
+            transform: scale(1.05);
+        }
+
+        /* ========== Footer ========== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #004d40, #000000);
+            color: white;
+        }
+
+        /* ========== Responsive Design ========== */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .menu-toggle {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .request-box {
+                width: 90%;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("requestForm");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                alert("Food request submitted successfully!");
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <!-- ========== NAVIGATION BAR ========== -->
+    <header class="navbar">
+        <div class="logo">
+            <h2>Amudra</h2>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate-food.html">Donate</a></li>
+                <li><a href="request-food.html" class="active">Request Food</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- ========== REQUEST FOOD FORM ========== -->
+    <section class="request-container">
+        <div class="request-box">
+            <h2>Request Food Assistance</h2>
+            <p>If you are in need of food, please fill out the form below.</p>
+            <form id="requestForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" placeholder="Your Name / Organization" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" id="location" placeholder="Your Location" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-utensils"></i>
+                    <input type="number" id="foodQuantity" placeholder="Food Quantity Needed (in kg)" required>
+                </div>
+                <textarea id="additionalInfo" placeholder="Additional Information (Optional)"></textarea>
+                <button type="submit" class="request-btn">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <p>&copy; 2025 Amudra. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

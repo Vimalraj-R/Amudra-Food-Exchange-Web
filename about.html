@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Amudra</title>
+
+    <style>
+        /* ========== General Styles ========== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        /* ========== Navbar ========== */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #004d40, #000000);
+
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* ========== About Section ========== */
+        .about {
+            padding: 100px 10%;
+            background: linear-gradient(to right, #2E7D32, #37474F);
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 500;
+            font-size: large;
+            color: white;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        /* ========== Team Section ========== */
+        .team {
+            text-align: center;
+            padding: 50px 10%;
+            background: linear-gradient(to right, #2E7D32, #37474F);
+            color: #f4f4f4;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .member {
+            background:green;
+            color:white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .member img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        /* ========== Facts Section ========== */
+        .facts {
+            text-align: center;
+            padding: 50px 10%;
+            background: linear-gradient(to right, #2E7D32, #37474F);
+            color: #f4f4f4;
+        }
+
+        .fact-items {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .fact h3 {
+            font-size: 28px;
+        }
+
+        /* ========== Footer ========== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #004d40, #000000);
+            color: white;
+        }
+
+        /* ========== Animations ========== */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .about, .team, .facts {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header>
+        <div class="logo">
+            <a href="index.html" style="color: white; text-decoration: none;">Amudra</a>
+        </div>
+        <nav style="text-align: center;">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="donate-food.html">Donate</a></li>
+                <li><a href="https://foodspoil-2tvknx9cycweztxerjrupb.streamlit.app/">Food Detection</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="about">
+        <h1>Who We Are</h1>
+        <div class="about-content">
+            <div class="about-text">
+                <p>At Amudra, we are on a mission to end food waste and feed those in need. As a non-profit organization, we bridge the gap between food surplus and hunger by connecting restaurants, supermarkets, and food producers with NGOs, charities, and shelters.</p>
+                <p>Using AI and machine learning, our platform ensures food quality, tracks expiration dates, and enables real-time donations. By transforming surplus food into a valuable resource, we strive to build a hunger-free and sustainable world.
+
+                    Join us in making a difference—because no food should go to waste, and no one should go hungry.</p>
+                <a href="donate.html" style="display: inline-block; padding: 10px 20px; background:#f4f4f4; color: green; text-decoration: none; border-radius: 5px;">Join Us</a>
+            </div>
+            <div class="about-image">
+                <img src="images/logo.png" alt="About Amudra">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TEAM SECTION ========== -->
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-members">
+            <div class="member">
+                <img src="images/vimal.jpg" alt="Vimalraj R">
+                <h3>Vimalraj R</h3>
+                <p>Founder</p>
+            </div>
+            <div class="member">
+                <img src="images/rishini.png" alt="Co-founder">
+                <h3>Rishini Dharan T<S></S></h3>
+                <p>Co-Founder</p>
+            </div>
+            <div class="member">
+                <img src="images/sabarish.png" alt="Developer">
+                <h3>Sabarish S</h3>
+                <p>Lead Developer</p>
+            </div>
+            <div class="member">
+                <img src="images/saravana.png" alt="Developer">
+                <h3>SaravanaKumar T</h3>
+                <p>Social Media Head</p>
+            </div>
+            <div class="member">
+                <img src="images/rahul.png" alt="Developer">
+                <h3>Anto Rahul A</h3>
+                <p>Infrastructure lead</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FACTS SECTION ========== -->
+    <section class="facts">
+        <h2>Our Impact</h2>
+        <div class="fact-items">
+            <div class="fact">
+                <h3><span class="counter" data-count="50000">0</span>+</h3>
+                <p>Meals Donated</p>
+            </div>
+            <div class="fact">
+                <h3><span class="counter" data-count="200">0</span>+</h3>
+                <p>Partners</p>
+            </div>
+            <div class="fact">
+                <h3><span class="counter" data-count="10">0</span></h3>
+                <p>Cities Covered</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <p>© 2025 Amudra | Smart solutions for zero hunger.</p>
+    </footer>
+
+    <!-- Counter Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let counters = document.querySelectorAll(".counter");
+            let speed = 200;
+
+            counters.forEach(counter => {
+                let updateCount = () => {
+                    let target = +counter.getAttribute("data-count");
+                    let count = +counter.innerText;
+                    let increment = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 30);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        });
+    </script>
+
+</body>
+</html>
